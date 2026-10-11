@@ -1,0 +1,98 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions for role-based authorization
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isStaff() {
+      return isAuthenticated() && (
+        request.auth.token.role == 'Staff' ||
+        request.auth.token.role == 'Manager' ||
+        request.auth.token.role == 'Super Admin'
+      );
+    }
+
+    function isManager() {
+      return isAuthenticated() && (
+        request.auth.token.role == 'Manager' ||
+        request.auth.token.role == 'Super Admin'
+      );
+    }
+
+    function isSuperAdmin() {
+      return isAuthenticated() && request.auth.token.role == 'Super Admin';
+    }
+
+    // Public read-only collections
+    match /settings/{doc} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    match /branding/{doc} {
+      allow read: true;
+      allow write: if isSuperAdmin();
+    }
+
+    match /menuCategories/{catId} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    match /menuItems/{itemId} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    match /festivals/{festId} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    match /tourism/{destId} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    match /gallery/{galId} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    match /rooms/{roomId} {
+      allow read: true;
+      allow write: if isManager();
+    }
+
+    // Bookings collection: anyone can submit, only authorized staff can inspect & update
+    match /bookings/{bookingId} {
+      allow create: if request.resource.data.customerName is string &&
+                       request.resource.data.mobileNumber is string &&
+                       request.resource.data.preferredDate is string &&
+                       request.resource.data.status == 'Pending';
+      allow read: if isStaff();
+      allow update, delete: if isStaff();
+    }
+
+    // Enquiries: anyone can create, only staff can view & respond
+    match /enquiries/{enquiryId} {
+      allow create: if request.resource.data.name is string &&
+                       request.resource.data.mobileNumber is string &&
+                       request.resource.data.message is string;
+      allow read, update, delete: if isStaff();
+    }
+
+    // Audit logs: immutable append by server/staff, readable by Super Admin
+    match /auditLogs/{logId} {
+      allow read: if isSuperAdmin();
+      allow write: if isStaff();
+    }
+
+    // Staff accounts
+    match /users/{userId} {
+      allow read, write: if isSuperAdmin();
+    }
+  }
+}

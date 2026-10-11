@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Filter for subtle depth matching the original emblem -->
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#801529" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Path for curved text along ribbon -->
+    <path id="ribbon-text-path" d="M 95,355 Q 300,315 505,355" fill="none" />
+  </defs>
+
+  <!-- Left Laurel Wreath Branch -->
+  <g id="left-wreath" fill="#E13F60">
+    <!-- Leaves ascending along the left arc -->
+    <path d="M 75,320 C 50,305 45,280 62,268 C 76,282 82,305 75,320 Z" />
+    <path d="M 85,305 C 65,288 62,260 80,248 C 92,265 94,290 85,305 Z" />
+    <path d="M 52,275 C 28,260 22,235 40,222 C 55,236 60,260 52,275 Z" />
+    <path d="M 70,250 C 48,230 45,205 65,192 C 78,210 80,235 70,250 Z" />
+    <path d="M 40,220 C 18,205 15,178 35,165 C 50,180 54,204 40,220 Z" />
+    <path d="M 68,195 C 46,175 48,148 70,135 C 82,154 82,180 68,195 Z" />
+    <path d="M 48,160 C 28,142 30,115 52,105 C 64,122 65,146 48,160 Z" />
+    <path d="M 82,140 C 65,120 70,95 92,85 C 102,105 100,128 82,140 Z" />
+    <path d="M 72,105 C 56,88 62,62 85,55 C 95,73 92,95 72,105 Z" />
+    <path d="M 112,90 C 98,70 108,46 130,40 C 138,58 132,80 112,90 Z" />
+    <path d="M 108,60 C 95,42 108,20 130,18 C 136,36 128,54 108,60 Z" />
+    <path d="M 152,58 C 142,38 158,18 180,18 C 185,36 175,54 152,58 Z" />
+    <path d="M 160,32 C 150,15 170,2 192,5 C 196,22 182,36 160,32 Z" />
+    <path d="M 210,40 C 205,22 225,8 245,15 C 245,32 230,42 210,40 Z" />
+  </g>
+
+  <!-- Right Laurel Wreath Branch (Mirror of Left) -->
+  <g id="right-wreath" fill="#E13F60" transform="translate(600, 0) scale(-1, 1)">
+    <!-- Leaves ascending along the right arc -->
+    <path d="M 75,320 C 50,305 45,280 62,268 C 76,282 82,305 75,320 Z" />
+    <path d="M 85,305 C 65,288 62,260 80,248 C 92,265 94,290 85,305 Z" />
+    <path d="M 52,275 C 28,260 22,235 40,222 C 55,236 60,260 52,275 Z" />
+    <path d="M 70,250 C 48,230 45,205 65,192 C 78,210 80,235 70,250 Z" />
+    <path d="M 40,220 C 18,205 15,178 35,165 C 50,180 54,204 40,220 Z" />
+    <path d="M 68,195 C 46,175 48,148 70,135 C 82,154 82,180 68,195 Z" />
+    <path d="M 48,160 C 28,142 30,115 52,105 C 64,122 65,146 48,160 Z" />
+    <path d="M 82,140 C 65,120 70,95 92,85 C 102,105 100,128 82,140 Z" />
+    <path d="M 72,105 C 56,88 62,62 85,55 C 95,73 92,95 72,105 Z" />
+    <path d="M 112,90 C 98,70 108,46 130,40 C 138,58 132,80 112,90 Z" />
+    <path d="M 108,60 C 95,42 108,20 130,18 C 136,36 128,54 108,60 Z" />
+    <path d="M 152,58 C 142,38 158,18 180,18 C 185,36 175,54 152,58 Z" />
+    <path d="M 160,32 C 150,15 170,2 192,5 C 196,22 182,36 160,32 Z" />
+    <path d="M 210,40 C 205,22 225,8 245,15 C 245,32 230,42 210,40 Z" />
+  </g>
+
+  <!-- Central "Kalika" Calligraphic Wordmark -->
+  <!-- Subtle dark dimensional shadow behind text -->
+  <g font-family="'Brush Script MT', 'Dancing Script', 'Great Vibes', 'Lucida Calligraphy', 'Snell Roundhand', cursive" font-size="124" font-weight="bold">
+    <text x="303" y="278" text-anchor="middle" fill="#80152B" opacity="0.45" letter-spacing="2">Kalika</text>
+    <text x="300" y="275" text-anchor="middle" fill="#E13F60" letter-spacing="2">Kalika</text>
+  </g>
+
+  <!-- Ribbon Arch Banner -->
+  <g id="banner">
+    <!-- Ribbon Left Notch -->
+    <polygon points="62,352 95,335 95,385 62,402 78,377" fill="#BF2B4C" />
+    <!-- Ribbon Right Notch -->
+    <polygon points="538,352 505,335 505,385 538,402 522,377" fill="#BF2B4C" />
+
+    <!-- Main Curved Ribbon Body -->
+    <path d="M 88,348 Q 300,305 512,348 L 506,396 Q 300,353 94,396 Z" fill="#E13F60" />
+
+    <!-- Ribbon White Border Accent Lines -->
+    <path d="M 91,351 Q 300,308 509,351" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5" />
+    <path d="M 96,393 Q 300,350 504,393" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5" />
+
+    <!-- "Hotel & Restaurant" Arched Text inside Ribbon -->
+    <text font-family="'Playfair Display', 'Times New Roman', Georgia, serif" font-size="34" font-style="italic" font-weight="700" fill="#FFFFFF" letter-spacing="3">
+      <textPath href="#ribbon-text-path" startOffset="50%" text-anchor="middle">
+        Hotel &amp; Restaurant
+      </textPath>
+    </text>
+  </g>
+
+  <!-- Bottom Left Wing Flourish -->
+  <path d="M 105,405 C 130,412 165,425 185,465 C 155,462 130,442 110,425 C 115,445 125,465 145,482 C 120,475 95,450 85,420 Z" fill="#E13F60" />
+
+  <!-- Bottom Right Wing Flourish -->
+  <path d="M 495,405 C 470,412 435,425 415,465 C 445,462 470,442 490,425 C 485,445 475,465 455,482 C 480,475 505,450 515,420 Z" fill="#E13F60" />
+
+  <!-- Center Emblem: Crossed/Tilted Cutlery (Knife & Fork) -->
+  <g id="cutlery" transform="translate(262, 388)">
+    <!-- Knife (Tilted Left) -->
+    <g transform="rotate(-28 15 25)">
+      <!-- Blade -->
+      <path d="M 12,0 C 16,10 18,25 16,42 L 10,42 C 11,25 11,10 12,0 Z" fill="#E13F60" />
+      <!-- Handle -->
+      <rect x="11" y="44" width="4.5" height="28" rx="2" fill="#E13F60" />
+    </g>
+
+    <!-- Fork (Tilted Right) -->
+    <g transform="translate(42, 0) rotate(24 15 25)">
+      <!-- Prongs -->
+      <rect x="8" y="0" width="2.5" height="18" rx="1" fill="#E13F60" />
+      <rect x="13" y="0" width="2.5" height="18" rx="1" fill="#E13F60" />
+      <rect x="18" y="0" width="2.5" height="18" rx="1" fill="#E13F60" />
+      <rect x="23" y="0" width="2.5" height="18" rx="1" fill="#E13F60" />
+      <!-- Base of fork -->
+      <path d="M 7,16 C 7,26 13,32 15,36 L 18,36 C 20,32 26,26 26,16 Z" fill="#E13F60" />
+      <!-- Handle -->
+      <rect x="14.5" y="38" width="4.5" height="28" rx="2" fill="#E13F60" />
+    </g>
+  </g>
+
+  <!-- Foundation Year: 2023 -->
+  <text x="300" y="475" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="#E13F60" letter-spacing="4">
+    2023
+  </text>
+</svg>

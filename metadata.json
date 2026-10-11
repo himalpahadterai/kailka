@@ -1,0 +1,8 @@
+{
+  "name": "Kalika Hotel & Restaurant | Janakpur, Nepal",
+  "description": "Celebrate Janakpur with Kalika. Premium restaurant, festival dining, Mithila cuisine, and hospitality in Janakpurdham, Nepal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
